@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI安全运营小助手</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 左侧导航 -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            鉴微Insight
+
+        </div>
+
+        <ul>
+
+        <li class="active">
+            <a href="index.html">🏠 首页</a>
+        </li>
+
+        <li>
+            <a href="pages/risk-sort.html">📊 自动化风险排序</a>
+        </li>
+
+        <li>
+            <a href="pages/risk-check.html">🛡 自动化风险排查</a>
+        </li>
+
+        <li>
+            <a href="pages/history.html">📋 历史任务</a>
+        </li>
+
+        <li>
+            <a href="pages/setting.html">⚙ 系统设置</a>
+        </li>
+
+        </ul>
+
+    </aside>
+
+
+    <!-- 主页面 -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <header>
+
+            <h2>AI安全运营小助手</h2>
+
+            <div class="user">
+
+                👤 Admin
+
+            </div>
+
+        </header>
+
+
+        <!-- AI输入 -->
+
+        <section class="ai-card">
+
+        <h3>
+        🤖 AI安全运营助手
+        </h3>
+
+
+        <p>
+        请选择安全运营任务，AI Agent将结合企业数据进行智能分析。
+        </p>
+
+
+        <div class="agent-entry">
+
+
+        <button onclick="location.href='pages/vulnerability-list.html'">
+
+        📊 AI风险排序
+
+        </button>
+
+
+        <button onclick="location.href='pages/asset-check.html'">
+
+        🛡 AI风险排查
+
+        </button>
+
+
+        </div>
+
+
+        </section>
+
+
+        <!-- AI能力 -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h3>📊 自动化风险排序</h3>
+
+                <p>
+
+                    AI自动计算漏洞风险优先级，
+                    输出修复建议。
+
+                </p>
+
+                <button>
+
+                    进入
+
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🛡 自动化风险排查</h3>
+
+                <p>
+
+                    AI自动分析漏洞影响资产，
+                    快速定位风险。
+
+                </p>
+
+                <button>
+
+                    进入
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 最近任务 -->
+
+        <section class="task">
+
+            <h3>
+
+                最近任务
+
+            </h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>任务名称</th>
+
+                        <th>类型</th>
+
+                        <th>状态</th>
+
+                        <th>时间</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Log4j漏洞分析</td>
+
+                        <td>风险排序</td>
+
+                        <td class="success">完成</td>
+
+                        <td>2026-07-15</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Spring漏洞排查</td>
+
+                        <td>风险排查</td>
+
+                        <td class="running">执行中</td>
+
+                        <td>2026-07-15</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Apache漏洞分析</td>
+
+                        <td>风险排序</td>
+
+                        <td class="waiting">等待中</td>
+
+                        <td>2026-07-14</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer>
+
+            AI Security Agent Demo V1.0 © 2026
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

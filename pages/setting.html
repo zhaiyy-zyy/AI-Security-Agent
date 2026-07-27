@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>系统设置</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h2>⚙ 系统设置</h2>
+
+<!-- AI模型 -->
+
+<div class="ai-card">
+
+<h3>🤖 AI模型设置</h3>
+
+<label>当前AI模型</label>
+
+<select>
+
+<option>DeepSeek-R1</option>
+
+<option>Qwen2.5</option>
+
+<option>GPT-4o</option>
+
+<option>Claude 4</option>
+
+</select>
+
+<label>Agent模式</label>
+
+<select>
+
+<option>自动模式</option>
+
+<option>人工确认模式</option>
+
+<option>仅分析模式</option>
+
+</select>
+
+</div>
+
+<!-- 风险评分 -->
+
+<div class="ai-card">
+
+<h3>📊 风险评分配置</h3>
+
+<label>
+
+<input type="checkbox" checked>
+
+CVSS评分
+
+</label>
+
+<br><br>
+
+<label>
+
+<input type="checkbox" checked>
+
+资产重要性
+
+</label>
+
+<br><br>
+
+<label>
+
+<input type="checkbox" checked>
+
+互联网暴露
+
+</label>
+
+<br><br>
+
+<label>
+
+<input type="checkbox" checked>
+
+EXP/POC
+
+</label>
+
+<br><br>
+
+<label>
+
+<input type="checkbox" checked>
+
+历史修复记录
+
+</label>
+
+</div>
+
+<!-- Prompt -->
+
+<div class="ai-card">
+
+<h3>💬 Prompt模板</h3>
+
+<textarea>
+
+你是一名企业安全运营专家，请根据漏洞信息、资产信息、漏洞知识库及企业业务影响进行综合分析，输出风险排序、修复建议及解释。
+
+</textarea>
+
+</div>
+
+<!-- 导出 -->
+
+<div class="ai-card">
+
+<h3>📄 报告导出设置</h3>
+
+<select>
+
+<option>Word</option>
+
+<option>PDF</option>
+
+<option>Excel</option>
+
+</select>
+
+</div>
+
+<!-- 保存 -->
+
+<div style="margin-top:30px;display:flex;gap:20px;">
+
+<button onclick="saveSetting()">
+
+💾 保存配置
+
+</button>
+
+<button onclick="resetSetting()">
+
+🔄 恢复默认
+
+</button>
+
+<button onclick="window.location.href='../index.html'">
+
+🏠 返回首页
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function saveSetting(){
+
+alert("系统配置保存成功！");
+
+}
+
+function resetSetting(){
+
+alert("恢复默认配置！");
+
+}
+
+</script>
+
+</body>
+
+</html>

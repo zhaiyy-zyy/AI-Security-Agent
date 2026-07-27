@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>历史任务</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+    <h2>📋 AI历史任务</h2>
+
+    <!-- 搜索栏 -->
+
+    <div class="ai-card">
+
+        <h3>任务搜索</h3>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="请输入任务名称、漏洞名称或CVE">
+
+        <button onclick="searchTask()">
+
+            🔍 搜索
+
+        </button>
+
+    </div>
+
+    <!-- 任务列表 -->
+
+    <div class="task">
+
+        <h3>历史任务列表</h3>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>任务名称</th>
+
+                <th>任务类型</th>
+
+                <th>状态</th>
+
+                <th>创建时间</th>
+
+                <th>操作</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody>
+
+            <tr>
+
+                <td>Log4j漏洞风险排序</td>
+
+                <td>风险排序</td>
+
+                <td class="success">已完成</td>
+
+                <td>2026-07-20 10:30</td>
+
+                <td>
+
+                    <button onclick="viewTask('result.html')">
+
+                        查看
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Spring漏洞资产排查</td>
+
+                <td>风险排查</td>
+
+                <td class="running">执行中</td>
+
+                <td>2026-07-20 11:15</td>
+
+                <td>
+
+                    <button onclick="viewTask('asset-result.html')">
+
+                        查看
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Redis漏洞分析</td>
+
+                <td>风险排序</td>
+
+                <td class="waiting">等待中</td>
+
+                <td>2026-07-19 16:00</td>
+
+                <td>
+
+                    <button onclick="viewTask('result.html')">
+
+                        查看
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- 统计 -->
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>总任务数</h3>
+
+            <p>36</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>成功完成</h3>
+
+            <p>30</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>执行中</h3>
+
+            <p>4</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>等待执行</h3>
+
+            <p>2</p>
+
+        </div>
+
+    </div>
+
+    <!-- 返回 -->
+
+    <div style="margin-top:30px;">
+
+        <button onclick="window.location.href='../index.html'">
+
+            🏠 返回首页
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function searchTask(){
+
+    const keyword=document.getElementById("search").value;
+
+    if(keyword===""){
+
+        alert("请输入搜索内容！");
+
+        return;
+
+    }
+
+    alert("搜索：" + keyword);
+
+}
+
+function viewTask(page){
+
+    window.location.href=page;
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>风险排查结果</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h2>🛡 自动化风险排查结果</h2>
+
+<!-- AI总结 -->
+
+<div class="ai-card">
+
+<h3>🤖 AI分析总结</h3>
+
+<p>
+
+已完成漏洞影响分析。
+
+共分析企业资产
+
+<strong>152</strong>
+
+台，
+
+发现
+
+<strong>12</strong>
+
+台资产受到影响，
+
+其中
+
+<strong>4</strong>
+
+台属于核心业务系统，
+
+建议立即修复。
+
+</p>
+
+</div>
+
+<!-- 漏洞信息 -->
+
+<div class="task">
+
+<h3>漏洞信息</h3>
+
+<table>
+
+<tr>
+
+<th>漏洞名称</th>
+
+<td>Log4j Remote Code Execution</td>
+
+</tr>
+
+<tr>
+
+<th>CVE编号</th>
+
+<td>CVE-2021-44228</td>
+
+</tr>
+
+<tr>
+
+<th>漏洞等级</th>
+
+<td class="success">Critical</td>
+
+</tr>
+
+<tr>
+
+<th>影响版本</th>
+
+<td>Log4j 2.0 ~ 2.14.1</td>
+
+</tr>
+
+<tr>
+
+<th>AI可信度</th>
+
+<td>98%</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<!-- 受影响资产 -->
+
+<div class="task">
+
+<h3>受影响资产</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>资产名称</th>
+
+<th>IP地址</th>
+
+<th>业务系统</th>
+
+<th>组件版本</th>
+
+<th>匹配结果</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>OA Server</td>
+
+<td>10.10.1.12</td>
+
+<td>OA系统</td>
+
+<td>2.13.3</td>
+
+<td class="success">受影响</td>
+
+</tr>
+
+<tr>
+
+<td>ERP Server</td>
+
+<td>10.10.3.8</td>
+
+<td>ERP</td>
+
+<td>2.14.0</td>
+
+<td class="success">受影响</td>
+
+</tr>
+
+<tr>
+
+<td>WEB01</td>
+
+<td>10.10.8.6</td>
+
+<td>门户网站</td>
+
+<td>未知</td>
+
+<td class="running">疑似受影响</td>
+
+</tr>
+
+<tr>
+
+<td>CRM</td>
+
+<td>10.10.9.1</td>
+
+<td>CRM</td>
+
+<td>2.17.0</td>
+
+<td class="waiting">未受影响</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- AI解释 -->
+
+<div class="ai-card">
+
+<h3>🤖 AI分析依据</h3>
+
+<ul>
+
+<li>✔ 自动查询漏洞知识库。</li>
+
+<li>✔ 自动获取漏洞影响版本。</li>
+
+<li>✔ 自动读取企业资产信息。</li>
+
+<li>✔ 自动匹配主机软件版本。</li>
+
+<li>✔ 自动分析业务系统影响。</li>
+
+<li>✔ 综合判断漏洞影响范围。</li>
+
+</ul>
+
+</div>
+
+<!-- AI建议 -->
+
+<div class="ai-card">
+
+<h3>💡 AI修复建议</h3>
+
+<ul>
+
+<li>① 优先修复互联网暴露资产。</li>
+
+<li>② 升级 Log4j 至 2.17 以上版本。</li>
+
+<li>③ 对核心业务服务器立即修复。</li>
+
+<li>④ 修复完成后自动重新验证漏洞。</li>
+
+<li>⑤ 自动关闭工单并记录历史。</li>
+
+</ul>
+
+</div>
+
+<!-- 按钮 -->
+
+<div style="display:flex;gap:20px;margin-top:30px;">
+
+<button>
+
+📄 导出Word
+
+</button>
+
+<button>
+
+📑 导出PDF
+
+</button>
+
+<button>
+
+📊 导出Excel
+
+</button>
+
+<button onclick="window.location.href='../index.html'">
+
+🏠 返回首页
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

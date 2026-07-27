@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>风险排序结果</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h2>📊 AI风险排序分析结果</h2>
+
+<!-- AI总结 -->
+
+<div class="ai-card">
+
+<h3>AI分析总结</h3>
+
+<p>
+
+本次共分析
+
+<strong>36</strong>
+
+个漏洞。
+
+其中：
+
+<strong>8</strong>
+
+个高危漏洞，
+
+建议优先修复
+
+<strong>3</strong>
+
+个漏洞。
+
+</p>
+
+</div>
+
+<!-- 风险排序 -->
+
+<div class="task">
+
+<h3>风险排序结果</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>排名</th>
+
+<th>漏洞名称</th>
+
+<th>CVE</th>
+
+<th>风险分数</th>
+
+<th>影响资产</th>
+
+<th>风险等级</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>①</td>
+
+<td>Log4j</td>
+
+<td>CVE-2021-44228</td>
+
+<td>96</td>
+
+<td>18</td>
+
+<td class="success">Critical</td>
+
+</tr>
+
+<tr>
+
+<td>②</td>
+
+<td>Spring4Shell</td>
+
+<td>CVE-2022-22965</td>
+
+<td>92</td>
+
+<td>15</td>
+
+<td class="running">High</td>
+
+</tr>
+
+<tr>
+
+<td>③</td>
+
+<td>Redis</td>
+
+<td>CVE-2022-0543</td>
+
+<td>87</td>
+
+<td>10</td>
+
+<td class="waiting">Medium</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- AI解释 -->
+
+<div class="ai-card">
+
+<h3>🤖 AI解释</h3>
+
+<h4>为什么 Log4j 排名第一？</h4>
+
+<ul>
+
+<li>✔ 已公开EXP，可直接利用。</li>
+
+<li>✔ 漏洞影响18台服务器。</li>
+
+<li>✔ 涉及OA及ERP核心业务。</li>
+
+<li>✔ 存在互联网暴露。</li>
+
+<li>✔ 历史修复率较低。</li>
+
+</ul>
+
+<br>
+
+<h4>AI修复建议</h4>
+
+<p>
+
+建议立即升级Log4j版本，
+
+限制互联网访问，
+
+优先修复核心业务服务器。
+
+</p>
+
+</div>
+
+<!-- 导出 -->
+
+<div style="margin-top:30px;display:flex;gap:20px;">
+
+<button>
+
+📄 导出Word
+
+</button>
+
+<button>
+
+📑 导出PDF
+
+</button>
+
+<button onclick="window.location.href='../index.html'">
+
+🏠 返回首页
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

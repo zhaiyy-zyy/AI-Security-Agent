@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>自动化风险排查</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h2>🛡 自动化风险排查比对</h2>
+
+<div class="ai-card">
+
+<h3>漏洞信息</h3>
+
+<label>漏洞名称 / CVE</label>
+
+<input
+type="text"
+id="cve"
+placeholder="例如：CVE-2021-44228">
+
+<label>资产范围</label>
+
+<select>
+
+<option>全部资产</option>
+
+<option>互联网资产</option>
+
+<option>办公资产</option>
+
+<option>服务器</option>
+
+</select>
+
+<label>业务系统</label>
+
+<select>
+
+<option>全部业务</option>
+
+<option>OA</option>
+
+<option>ERP</option>
+
+<option>CRM</option>
+
+</select>
+
+<h3>排查方式</h3>
+
+<div class="check-group">
+
+<label>
+
+<input type="checkbox" checked>
+
+组件版本比对
+
+</label>
+
+<label>
+
+<input type="checkbox" checked>
+
+主机软件比对
+
+</label>
+
+<label>
+
+<input type="checkbox" checked>
+
+资产标签匹配
+
+</label>
+
+<label>
+
+<input type="checkbox" checked>
+
+暴露面分析
+
+</label>
+
+</div>
+
+<h3>AI Prompt</h3>
+
+<textarea id="prompt">
+
+请自动分析漏洞影响哪些资产，
+判断业务影响范围，
+生成排查报告。
+
+</textarea>
+
+<button id="startCheck">
+
+🚀 开始AI排查
+
+</button>
+
+</div>
+
+<div class="task">
+
+<h3>最近排查</h3>
+
+<table>
+
+<tr>
+
+<th>漏洞</th>
+
+<th>状态</th>
+
+</tr>
+
+<tr>
+
+<td>Log4j</td>
+
+<td class="success">
+
+完成
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Spring</td>
+
+<td class="running">
+
+执行中
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+document
+
+.getElementById("startCheck")
+
+.addEventListener("click",function(){
+
+const cve=document
+
+.getElementById("cve")
+
+.value;
+
+if(cve===""){
+
+alert("请输入漏洞名称或CVE");
+
+return;
+
+}
+
+window.location.href="running.html";
+
+});
+
+</script>
+
+</body>
+
+</html>

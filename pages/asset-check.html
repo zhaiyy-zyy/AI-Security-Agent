@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+资产风险排查
+</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="main">
+
+
+<h2>
+🛡 资产风险排查中心
+</h2>
+
+
+
+<div class="task">
+
+
+<h3>
+选择排查漏洞
+</h3>
+
+
+<label>
+
+漏洞：
+
+</label>
+
+
+<select id="vulnerability">
+
+
+<option value="Log4j">
+
+CVE-2021-44228 Log4j远程代码执行漏洞
+
+</option>
+
+
+<option value="Spring">
+
+CVE-2022-22965 Spring4Shell漏洞
+
+</option>
+
+
+<option value="Redis">
+
+CVE-2022-0543 Redis漏洞
+
+</option>
+
+
+</select>
+
+
+
+<h3>
+选择资产范围
+</h3>
+
+
+<div>
+
+
+<label>
+
+<input 
+type="checkbox"
+name="asset"
+value="Web服务器">
+
+Web服务器
+
+</label>
+
+
+<br>
+
+
+<label>
+
+<input 
+type="checkbox"
+name="asset"
+value="数据库服务器">
+
+数据库服务器
+
+</label>
+
+
+<br>
+
+
+<label>
+
+<input 
+type="checkbox"
+name="asset"
+value="OA业务系统">
+
+OA业务系统
+
+</label>
+
+
+<br>
+
+
+<label>
+
+<input 
+type="checkbox"
+name="asset"
+value="互联网暴露资产">
+
+互联网暴露资产
+
+</label>
+
+
+</div>
+
+
+
+<br>
+
+
+<button onclick="startCheck()">
+
+🤖 AI开始排查
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<script>
+
+
+function startCheck(){
+
+
+    // 获取选择的资产
+
+    let assets=[];
+
+
+    document
+    .querySelectorAll(
+        "input[name='asset']:checked"
+    )
+    .forEach(item=>{
+
+
+        assets.push(item.value);
+
+
+    });
+
+
+
+    if(assets.length===0){
+
+
+        alert(
+        "请选择至少一个资产范围"
+        );
+
+
+        return;
+
+
+    }
+
+
+
+    // 保存任务类型
+
+    sessionStorage.setItem(
+        "taskType",
+        "check"
+    );
+
+
+
+    // 保存排查资产
+
+    sessionStorage.setItem(
+        "assets",
+        assets.join(",")
+    );
+
+
+
+    // 保存漏洞
+
+    let vuln=
+    document
+    .getElementById("vulnerability")
+    .value;
+
+
+
+    sessionStorage.setItem(
+        "vulnerability",
+        vuln
+    );
+
+
+
+    // 跳转权限页面
+
+    window.location.href=
+    "permission.html";
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+
+</html>

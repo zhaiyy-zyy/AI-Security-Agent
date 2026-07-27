@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>AI Agent执行中</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="running-page">
+
+<h1>
+
+🤖 AI Agent 正在执行任务
+
+</h1>
+
+<div class="progress">
+
+<div class="bar"></div>
+
+</div>
+
+<ul id="steps">
+
+<li>🟢 理解用户需求...</li>
+
+<li>🟢 查询漏洞数据库...</li>
+
+<li>🟢 查询资产数据库...</li>
+
+<li>🟢 获取漏洞情报...</li>
+
+<li>🟢 AI风险评分...</li>
+
+<li>🟢 正在生成分析报告...</li>
+
+</ul>
+
+<p>
+
+请稍候……
+
+</p>
+
+</div>
+
+<script>
+
+let type=sessionStorage.getItem("taskType");
+
+
+setTimeout(function(){
+
+
+if(type==="check"){
+
+window.location.href="asset-result.html";
+
+}
+
+else{
+
+window.location.href="result.html";
+
+}
+
+
+},5000);
+
+</script>
+
+</body>
+
+</html>

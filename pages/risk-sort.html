@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>自动化风险排序</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h2>📊 自动化风险排序</h2>
+
+<div class="ai-card">
+
+<h3>任务配置</h3>
+
+<label>漏洞范围</label>
+
+<select>
+
+<option>全部漏洞</option>
+
+<option>高危漏洞</option>
+
+<option>中危漏洞</option>
+
+<option>低危漏洞</option>
+
+</select>
+
+<label>资产范围</label>
+
+<select>
+
+<option>全部资产</option>
+
+<option>互联网资产</option>
+
+<option>办公资产</option>
+
+<option>服务器</option>
+
+</select>
+
+<label>业务系统</label>
+
+<select>
+
+<option>全部业务</option>
+
+<option>OA</option>
+
+<option>ERP</option>
+
+<option>CRM</option>
+
+</select>
+
+<h3>风险评分因子</h3>
+
+<div class="check-group">
+
+<label><input type="checkbox" checked> CVSS评分</label>
+
+<label><input type="checkbox" checked> 漏洞等级</label>
+
+<label><input type="checkbox" checked> 是否存在EXP</label>
+
+<label><input type="checkbox" checked> 是否互联网暴露</label>
+
+<label><input type="checkbox" checked> 资产重要性</label>
+
+<label><input type="checkbox" checked> 历史修复状态</label>
+
+</div>
+
+<h3>AI Prompt</h3>
+
+<textarea id="prompt">
+
+请分析本周最高风险漏洞，并按照业务影响进行排序，生成风险解释及修复建议。
+
+</textarea>
+
+<button id="startSort">
+
+🚀 开始AI分析
+
+</button>
+
+</div>
+
+<div class="task">
+
+<h3>最近分析</h3>
+
+<table>
+
+<tr>
+
+<th>任务</th>
+
+<th>状态</th>
+
+</tr>
+
+<tr>
+
+<td>Log4j漏洞排序</td>
+
+<td class="success">完成</td>
+
+</tr>
+
+<tr>
+
+<td>Spring漏洞排序</td>
+
+<td class="running">执行中</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+document
+
+.getElementById("startSort")
+
+.addEventListener("click",function(){
+
+window.location.href="running.html";
+
+});
+
+</script>
+
+</body>
+
+</html>
